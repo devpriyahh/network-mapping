@@ -1,0 +1,11 @@
+import subprocess
+
+ip = "192.168.60.4"
+
+result = subprocess.run(
+    ["nmap", "-sn", ip],
+    capture_output=True,
+    text=True
+)
+
+print(result.stdout)
